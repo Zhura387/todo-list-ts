@@ -28,8 +28,9 @@ export const TodoList: React.FC<TodoListProps> = ({ todos, onToggle, onRemove })
                 return (
                     <li className={classes.join(' ')} key={item.id}>
                         <label>
-                            <input type='checkbox' checked={item.completed}
-                                onChange={onToggle.bind(null, item.id)}
+                            <input type='checkbox' 
+                            checked={item.completed}
+                               onChange={onToggle.bind(null,item.id)}
                             ></input>
                             <span>{item.title}</span>
                             <i className="material-icons red-text"
